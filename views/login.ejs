@@ -1,0 +1,26 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body">
+            <h1 class="text-center mb-3"><i class="fas fa-user-plus"></i>Login</h1>
+            <%- include ("./partials/messages") %> 
+            <form action="/users/login" method="POST">
+                
+                <div class="form-group">
+                    <label for="name">Email</label>
+                    <input type="text" name="email" id="email" class="form-control" 
+                    placeholder="Enter Email" value="<%= typeof email != 'undefined' ? email : ''%>">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" class="form-control" 
+                    placeholder="Enter Password" >
+                </div>
+                
+                <div class="form-group" style="padding-top: 15px;">
+                    <button style="width: 100%;" type="submit" class="btn btn-primary btn-block">Login</button>
+                </div>
+            </form>
+            <p class="lead mt-4">Have no account <a href="/users/register">Register</a></p>
+        </div>
+    </div>
+</div>
